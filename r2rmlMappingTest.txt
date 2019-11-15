@@ -1,0 +1,533 @@
+# Mapping created using Juma editor.
+  @prefix rr: <http://www.w3.org/ns/r2rml#> .
+  @prefix rrf: <http://kdeg.scss.tcd.ie/ns/rrf#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+  <#TriplesMapTriplesMapbins>
+  rr:logicalTable [
+    rr:tableName "bins";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/bin/{BIN_NO}";
+      rr:class foaf:Bin;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binType;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_TYPE";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:street;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binNo;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_NO";
+     ];
+  ];
+  .
+
+  <#TriplesMap2>
+  rr:logicalTable [
+    rr:tableName "bins";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/bin-features/{BIN_NO}";
+      rr:class foaf:BinFeatures;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:damaged;
+    ];
+
+     rr:objectMap [
+      rr:column "DAMAGED";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:advertSpace;
+    ];
+
+     rr:objectMap [
+      rr:column "ADVERT_SPACE";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:cigButtContainer;
+    ];
+
+     rr:objectMap [
+      rr:column "CIG_BUTT_CONTAINER";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:accessible;
+    ];
+
+     rr:objectMap [
+      rr:column "ACCESSIBLE";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binNo;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_NO";
+     ];
+  ];
+  .
+
+  <#TriplesMap3>
+  rr:logicalTable [
+    rr:tableName "bins";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/accessibility-area/{BIN_NO}";
+      rr:class foaf:AccessibilityArea;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:retailShop;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_RETAIL_SHOP";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:school;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_SCHOOL";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:park;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_PARK";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:residential;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_RESIDENTIAL";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:publicBuilding;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_PUBLIC_BUILDING";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:footpath;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION_FOOTPATH";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binNo;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_NO";
+     ];
+  ];
+  .
+
+  <#TriplesMap4>
+  rr:logicalTable [
+    rr:tableName "bins";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/zonal-area/{BIN_NO}";
+      rr:class foaf:ZonalArea;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:bidsArea;
+    ];
+
+     rr:objectMap [
+      rr:column "BIDS_AREA";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binNo;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_NO";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:cbdArea;
+    ];
+
+     rr:objectMap [
+      rr:column "CBD_AREA";
+     ];
+  ];
+  .
+
+  <#TriplesMap5>
+  rr:logicalTable [
+    rr:tableName "bins";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/street/{BIN_NO}";
+      rr:class foaf:Street;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:streetName;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:ward;
+    ];
+
+     rr:objectMap [
+      rr:column "WARD_DED";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:lea;
+    ];
+
+     rr:objectMap [
+      rr:column "LEA";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:dccArea;
+    ];
+
+     rr:objectMap [
+      rr:column "DCC_AREA";
+     ];
+  ];
+  .
+
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+
+  <#TriplesMapTriplesMapbin_type_mapping>
+  rr:logicalTable [
+    rr:tableName "bin_type_mapping";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/bin-type/{BIN_TYPE}";
+      rr:class foaf:BinTypeMapping;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:category;
+    ];
+
+     rr:objectMap [
+      rr:column "CATEGORY";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:binType;
+    ];
+
+     rr:objectMap [
+      rr:column "BIN_TYPE";
+     ];
+  ];
+  .
+
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+
+  <#TriplesMapTriplesMapDCC_mapping>
+  rr:logicalTable [
+    rr:tableName "DCC_mapping";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/dcc-area/{DCC_CODE}";
+      rr:class foaf:DCCArea;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:dccArea;
+    ];
+
+     rr:objectMap [
+      rr:column "DCC_AREA";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:dccCode;
+    ];
+
+     rr:objectMap [
+      rr:column "DCC_CODE";
+     ];
+  ];
+  .
+
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+
+  <#TriplesMapTriplesMapstreet_surface_mapping>
+  rr:logicalTable [
+    rr:tableName "street_surface_mapping";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/surface-type/{SURFACE_TYPE_CODE}";
+      rr:class foaf:SurfaceType;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:surfaceTypeName;
+    ];
+
+     rr:objectMap [
+      rr:column "SURFACE_TYPE_NAME";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:surfaceTypeCode;
+    ];
+
+     rr:objectMap [
+      rr:column "SURFACE_TYPE_CODE";
+     ];
+  ];
+  .
+
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+
+  <#TriplesMapTriplesMapstreet_class_mapping>
+  rr:logicalTable [
+    rr:tableName "street_class_mapping";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/street-class-code/{STREET_CLASS_CODE}";
+      rr:class foaf:StreetClassCode;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:streetClass;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET_CLASS";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:streetClassCode;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET_CLASS_CODE";
+     ];
+  ];
+  .
+
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csv: <http://example.org/csv/> .
+
+  <#TriplesMapTriplesMapstreets>
+  rr:logicalTable [
+    rr:tableName "streets";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/street/{STREET_NAME}";
+      rr:class foaf:Street;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:streetName;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET_NAME";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:Irish;
+    ];
+
+     rr:objectMap [
+      rr:column "IRISH";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:dccCode;
+    ];
+
+     rr:objectMap [
+      rr:column "NEW_AREA_CODE";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:streetClassCode;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET_CLASS_CODE";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:surfaceTypeCode;
+    ];
+
+     rr:objectMap [
+      rr:column "SURFACE_TYPE_CODE";
+     ];
+  ];
+  .
+
+  <#TriplesMap11>
+  rr:logicalTable [
+    rr:tableName "streets";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/street-features/{STREET_NAME}";
+      rr:class foaf:StreetFeatures;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant rdfs:streetName;
+    ];
+
+     rr:objectMap [
+      rr:column "STREET_NAME";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:roadStart;
+    ];
+
+     rr:objectMap [
+      rr:column "ROAD_START";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:yearBuilt;
+    ];
+
+     rr:objectMap [
+      rr:column "YEAR_BUILT";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:roadFinish;
+    ];
+
+     rr:objectMap [
+      rr:column "ROAD_FINISH";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:routeNo;
+    ];
+
+     rr:objectMap [
+      rr:column "ROUTE_NO";
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant foaf:lineLength;
+    ];
+
+     rr:objectMap [
+      rr:column "LINE_LENGTH";
+     ];
+  ];
+  .

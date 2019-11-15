@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>DCC | Bins | Streets</title>
+
+    <link href="../../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../../static/css/admin.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <div style="width: 100%;">
+        <a class="navbar-brand mr-1" href="" style="cursor: pointer;">DCC | Bins | Streets</a>
+        <a class="navbar-brand mr-1" href="" style="float: right; cursor: pointer;">Group C</a>
+    </div>
+</nav>
+
+<div id="wrapper">
+    <ul class="sidebar navbar-nav">
+        {% if path == "/" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/"><i class="fas fa-fw fa-pencil-alt"></i><span> Editor</span></a>
+        </li>
+        {% if path == "/query/1" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/1"><i class="fas fa-fw fa-table"></i><span> Query 1</span></a>
+        </li>
+        {% if path == "/query/2" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/2"><i class="fas fa-fw fa-table"></i><span> Query 2</span></a>
+        </li>
+        {% if path == "/query/3" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/3"><i class="fas fa-fw fa-table"></i><span> Query 3</span></a>
+        </li>
+        {% if path == "/query/4" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/4"><i class="fas fa-fw fa-table"></i><span> Query 4</span></a>
+        </li>
+        {% if path == "/query/5" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/5"><i class="fas fa-fw fa-table"></i><span> Query 5</span></a>
+        </li>
+        {% if path == "/query/6" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/6"><i class="fas fa-fw fa-table"></i><span> Query 6</span></a>
+        </li>
+        {% if path == "/query/7" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/7"><i class="fas fa-fw fa-table"></i><span> Query 7</span></a>
+        </li>
+        {% if path == "/query/8" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/8"><i class="fas fa-fw fa-table"></i><span> Query 8</span></a>
+        </li>
+        {% if path == "/query/9" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/9"><i class="fas fa-fw fa-table"></i><span> Query 9</span></a>
+        </li>
+        {% if path == "/query/10" %}
+            <li class="nav-item active">
+                {% else %}
+                    <li class="nav-item">
+                {% endif %}
+            <a class="nav-link" href="/query/10"><i class="fas fa-fw fa-table"></i><span> Query 10</span></a>
+        </li>
+    </ul>
+    <div id="content-wrapper">
+
+        {% block content %}{% endblock %}
+
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Prateek Tulsyan | Divyanshu Marwah | Piyush Saxena | Ankit Thaparia | Akash Verma | Chen Wang</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="../../static/vendor/jquery/jquery.min.js"></script>
+<script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../../static/vendor/datatables/jquery.dataTables.js"></script>
+<script src="../../static/vendor/datatables/dataTables.bootstrap4.js"></script>
+<script src="../../static/js/admin.min.js"></script>
+<script src="../../static/js/demo/datatables-demo.js"></script>
+</body>
+</html>

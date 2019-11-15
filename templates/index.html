@@ -1,0 +1,39 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="" style="cursor: pointer">Knowledeg & Data Engineering</a>
+        </li>
+        <li class="breadcrumb-item active">Dublin City Center | Bins & Streets Survey</li>
+    </ol>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table" style="text-transform: capitalize;">&nbsp;{{question}}</i>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            {%for vars in results.vars%}
+                                <th style="text-transform: uppercase;">{{vars}}</th>
+                            {%endfor%}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for row in results%}
+                            <tr>
+                                {%for value in row%}
+                                    <td style="text-transform: capitalize;">{{value}}</td>
+                                {%endfor%}
+                            </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
