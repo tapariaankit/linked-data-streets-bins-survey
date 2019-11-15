@@ -1,0 +1,11 @@
+ SELECT ?streetName(COUNT(*) AS ?binCount) ?lineLength (xsd:float(?binCount)*xsd:float(100)/xsd:float(?lineLength) AS ?binDensity)
+    WHERE {
+    ?temp1  rdf-schema:binNo ?binNo.
+    BIND(IRI(CONCAT("http://www.example.org/street/", ENCODE_FOR_URI(?binNo))) AS ?streetBinURI)
+    ?streetBinURI  rdf-schema:streetName ?streetName.
+    BIND(IRI(CONCAT("http://www.example.org/street-features/", ENCODE_FOR_URI(?streetName))) AS ?streetFeaturesURI)
+    ?streetFeaturesURI  foaf:lineLength ?lineLength.
+    FILTER (regex(str(?temp1), "bin"))
+    }
+    GROUP BY ?streetName ?binCount ?lineLength
+    ORDER BY ?binDensity

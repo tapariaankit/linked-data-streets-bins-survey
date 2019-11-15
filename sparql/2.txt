@@ -1,0 +1,9 @@
+SELECT ?surfaceTypeName (COUNT(*) AS ?count)
+    WHERE {
+    ?temp1  rdf-schema:street ?streetName.
+    BIND(IRI(CONCAT("http://www.example.org/street/", ENCODE_FOR_URI(?streetName))) AS ?streetNameURI)
+    ?streetNameURI  rdf-schema:surfaceTypeCode ?surfaceTypeCodeURI.
+    ?surfaceTypeCodeURI  foaf:surfaceTypeName ?surfaceTypeName.
+    FILTER (regex(str(?temp1), "bin"))
+    }
+    GROUP BY ?surfaceTypeName

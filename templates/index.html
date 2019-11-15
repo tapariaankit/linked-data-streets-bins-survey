@@ -17,17 +17,18 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            {%for vars in results.vars%}
+                            {%for vars in results.head.vars%}
                                 <th style="text-transform: uppercase;">{{vars}}</th>
                             {%endfor%}
                         </tr>
                     </thead>
                     <tbody>
-                        {%for row in results%}
+                        {%for row in results.results.bindings%}
+                           
                             <tr>
-                                {%for value in row%}
-                                    <td style="text-transform: capitalize;">{{value}}</td>
-                                {%endfor%}
+                             {%for vars in results.head.vars%}
+                                    <td style="text-transform: capitalize;">{{row[vars]['value']}}</td>
+                            {%endfor%}
                             </tr>
                         {%endfor%}
                     </tbody>

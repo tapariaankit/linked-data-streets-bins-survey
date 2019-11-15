@@ -1,0 +1,9 @@
+SELECT ?dccArea (COUNT(*) AS ?count)
+    WHERE {
+    ?temp1  rdf-schema:dccArea ?dccArea.
+    ?temp1  rdf-schema:streetName ?streetName.
+    BIND(IRI(CONCAT("http://www.example.org/street-features/", ENCODE_FOR_URI(?streetName))) AS ?streetFeatureURI)
+    ?streetFeatureURI  foaf:yearBuilt ?yearBuilt.
+    FILTER (regex(str(?temp1), "street/") && ?yearBuilt >=2014)
+    }
+    GROUP BY ?dccArea

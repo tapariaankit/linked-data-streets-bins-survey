@@ -1,0 +1,13 @@
+SELECT ?ward ?streetClass (COUNT(*) AS ?count)
+    WHERE {
+    ?temp1  rdf-schema:binNo ?binNo.
+    BIND(IRI(CONCAT("http://www.example.org/street/", ENCODE_FOR_URI(?binNo))) AS ?streetBinURI)
+    ?streetBinURI  rdf-schema:streetName ?streetName.
+    ?streetBinURI  foaf:ward ?ward.
+    BIND(IRI(CONCAT("http://www.example.org/street/", ENCODE_FOR_URI(?streetName))) AS ?streetNameURI)
+    ?streetNameURI  rdf-schema:streetClassCode ?streetClassCodeURI.
+    ?streetClassCodeURI  foaf:streetClass ?streetClass.
+    FILTER (regex(str(?temp1), "bin"))
+    }
+    GROUP BY ?ward ?streetClass
+    ORDER BY ?ward
