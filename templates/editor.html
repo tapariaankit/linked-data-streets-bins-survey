@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="" style="cursor: pointer">Knowledeg & Data Engineering</a>
+        </li>
+        <li class="breadcrumb-item active">Sparql Query Editor</li>
+    </ol>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table" style="text-transform: capitalize;"> Enter your query here</i>
+        </div>
+        <div class="card-body">
+            <div id="yasqe"></div>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table" style="text-transform: capitalize;"> See the results here</i>
+        </div>
+        <div class="card-body">
+            <div id="yasr"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

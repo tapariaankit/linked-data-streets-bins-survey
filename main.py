@@ -9,7 +9,7 @@ sparql = SPARQLWrapper("http://localhost:8890/sparql")
 @app.route("/")
 def editor():
     results = []
-    return render_template("index.html", results=results, path='/')
+    return render_template("editor.html", results=results, path='/')
 
 
 @app.route("/query/1")
